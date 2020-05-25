@@ -1,0 +1,10 @@
+ext.github = { String path ->
+    repositories.maven {
+        url = uri("https://maven.pkg.github.com/$path")
+        
+        credentials {
+            username = project.hasProperty("githubPackagesUser") ? githubPackagesUser : System.getenv("GITHUB_ACTOR")
+            password = project.hasProperty("githubPackagesAuth") ? githubPackagesAuth : System.getenv("GITHUB_TOKEN")
+        }
+    }
+}
