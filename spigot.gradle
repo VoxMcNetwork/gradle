@@ -1,0 +1,13 @@
+apply plugin: 'java'
+
+
+repositories {
+	mavenCentral()
+
+	maven({ url "https://papermc.io/repo/repository/maven-public/" })
+}
+
+dependencies {
+	compileOnly "org.spigotmc:spigot-api:+"
+	
+}
