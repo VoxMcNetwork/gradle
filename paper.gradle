@@ -1,0 +1,12 @@
+apply plugin: 'java'
+
+
+repositories {
+	mavenCentral()
+
+	maven({ url "https://papermc.io/repo/repository/maven-public/" })
+}
+
+dependencies {
+	compileOnly "com.destroystokyo.paper:paper-api:+"
+}
