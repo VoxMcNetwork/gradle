@@ -22,9 +22,11 @@ dependencies {
 
 
 compileKotlin {
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8
     kotlinOptions.freeCompilerArgs += ["-XXLanguage:+NewInference", "-Xopt-in=kotlin.ExperimentalStdlibApi"]
 }
 
 compileTestKotlin {
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8
     kotlinOptions.freeCompilerArgs += ["-XXLanguage:+NewInference", "-Xopt-in=kotlin.ExperimentalStdlibApi"]
 }
